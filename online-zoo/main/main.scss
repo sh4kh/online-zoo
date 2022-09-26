@@ -105,6 +105,10 @@ h1 {
         /* or 22px */
         color: #FFFFFF;
 
+        &:hover {
+            text-decoration: underline;
+        }
+
         &_active {
             color:#F9804B;
         }
@@ -179,7 +183,7 @@ h1 {
 
 
 .button {
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background: orange;
     border-radius: 25px;
     min-height: 54px;
     width: 298px;
@@ -193,6 +197,10 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    &:hover {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        transition: background-color 0.5s linear;
+    }
 
     &_square {
         border-radius: 5px;
@@ -207,6 +215,14 @@ h1 {
     }
 }
 .backstage {
+
+    position: relative;
+
+    &__flower {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 
     &__container {
         padding-top: 140px;

@@ -185,6 +185,9 @@ h1 {
   /* or 22px */
   color: #FFFFFF;
 }
+.menu__link:hover {
+  text-decoration: underline;
+}
 .menu__link_active {
   color: #F9804B;
 }
@@ -238,7 +241,7 @@ h1 {
 }
 
 .button {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  background: orange;
   border-radius: 25px;
   min-height: 54px;
   width: 298px;
@@ -253,10 +256,22 @@ h1 {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.button:hover {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  transition: background-color 0.5s linear;
+}
 .button_square {
   border-radius: 5px;
 }
 
+.backstage {
+  position: relative;
+}
+.backstage__flower {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .backstage__container {
   padding-top: 140px;
   padding-bottom: 180px;
