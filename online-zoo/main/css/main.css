@@ -250,3 +250,31 @@ h1 {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+
+.backstage__container {
+  padding-top: 140px;
+  padding-bottom: 180px;
+  display: flex;
+}
+.backstage__img {
+  flex: 0 0 609px;
+}
+.backstage__content {
+  flex: 1 1 auto;
+  margin-left: 87px;
+  color: #333B41;
+}
+.backstage__title {
+  font-size: 48px;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+.backstage__text {
+  font-size: 16px;
+  line-height: 130%;
+}
+.backstage__subtitle {
+  font-size: 24px;
+  line-height: 120%;
+  margin: 54px 0 34px 0;
+}

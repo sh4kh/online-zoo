@@ -194,3 +194,52 @@ h1 {
 }
 
 
+//=========BACKSTAGE==========
+.page {
+
+    &__backstage {
+    }
+}
+.backstage {
+
+    &__container {
+        padding-top: 140px;
+        padding-bottom: 180px;
+
+        display: flex;
+    }
+
+    &__img {
+        flex: 0 0 609px;
+    }
+
+    &__content {
+        flex: 1 1 auto;
+        margin-left: 87px;
+        color: #333B41;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 130%;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        line-height: 120%;
+        margin: 54px 0 34px 0;
+    }
+
+    &__text {
+    }
+}
+
+
+
+
