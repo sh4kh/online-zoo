@@ -1,3 +1,196 @@
-h1 {
+//Import Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700);
+
+//Import Reset Styles file
+@import "../reset";
+
+//Main 
+body {
+    font-family: 'Roboto';
+    font-style: normal;
     font-size: 16px;
+    line-height: 140%;
+    background-color: #FFFFFF;
 }
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+._container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-size: 19.0145px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.logo {
+    display: inline-block;
+    width: 82px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    position: relative;
+
+    &__image {
+        position: absolute;
+        width: 14.81px;
+        height: 22.58px;
+        left: 8px;
+        top: 18.64px;
+    }
+}
+
+.copy {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    color: #FFFFFF
+}
+
+//========HEADER===========================================================
+.header {
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+
+    &__container {
+        display: flex;
+        min-height: 80px;
+        align-items: center;
+    }
+
+    &__logo {
+    }
+
+    &__menu {
+        margin-left: 63px;
+    }
+
+    &__copy {
+        margin-left: 438px;
+    }
+}
+
+.menu {
+
+    &__list {
+        display: flex;
+
+    }
+
+    &__item {
+        margin-right: 58px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        /* or 22px */
+        color: #FFFFFF;
+
+        &_active {
+            color:#F9804B;
+        }
+    }
+}
+
+//=============MAIN================================
+
+//=========MAIN-BLOCK==============================
+.page {
+
+    &__main-block {
+    }
+}
+.main-block {
+    
+    background-image: url("/sh4kh-JSFE2022Q3/online-zoo/img/background_panda.jpg");
+
+    &__container {
+    }
+
+	&__content {
+        padding-top: 86px;
+        margin-left: 661px;
+        padding-bottom: 100px;
+        width: 531px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+
+    &__title {
+        position: relative;
+        text-align: center;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 465px;
+            height: 465px;
+            top: -76px;
+            left: -70px;
+            border-radius: 50%;
+            /* orange */
+            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        }
+    }
+
+	&__text {
+        font-family: 'Roboto';
+        font-weight: 700;
+        font-size: 106.496px;
+        line-height: 75%;
+        /* or 80px */            
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        & span {
+            color: #FFEE2E
+        }
+
+        position: relative;
+        z-index: 10;
+	}
+
+	&__button {
+        margin-top: 60px;
+	}
+}
+
+
+.button {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    min-height: 54px;
+    width: 298px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF
+}
+
+
