@@ -278,3 +278,42 @@ h1 {
   line-height: 120%;
   margin: 54px 0 34px 0;
 }
+.animals__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.animals__column {
+  padding: 0 15px;
+  flex: 0 1 33.333%;
+  margin-bottom: 20px;
+}
+.animals__item {
+  border: 1px solid #FA6F32;
+  border-radius: 5px;
+}
+.animals__button {
+  margin: 80px auto 100px auto;
+}
+
+.animal__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px 13px 16px;
+}
+.animal__text {
+  color: #000000;
+}
+.animal__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  text-transform: uppercase;
+}
+.animal__home {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+}
