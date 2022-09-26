@@ -128,6 +128,7 @@ h1 {
 .logo {
   display: inline-block;
   width: 82px;
+  height: 52px;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
   position: relative;
@@ -190,6 +191,8 @@ h1 {
 
 .main-block {
   background-image: url("/sh4kh-JSFE2022Q3/online-zoo/img/background_panda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .main-block__content {
   padding-top: 86px;
@@ -249,6 +252,9 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+.button_square {
+  border-radius: 5px;
 }
 
 .backstage__container {
@@ -399,4 +405,210 @@ h1 {
 }
 .how__arrow {
   padding-top: 67px;
+}
+
+.testimonials {
+  position: relative;
+  padding: 140px 0 180px 0;
+}
+.testimonials__title {
+  font-size: 36px;
+  line-height: 130%;
+  /* identical to box height, or 47px */
+  text-align: center;
+  color: #333B41;
+  margin-bottom: 47px;
+}
+.testimonials__row {
+  display: flex;
+  margin: 0 -15px;
+}
+.testimonials__column {
+  flex: 1 1 25%;
+  padding: 0 15px;
+}
+.testimonials__item {
+  background: #F1F3F2;
+  border-radius: 20px;
+  border: 2px solid rgba(254, 189, 171, 0.74);
+  padding: 15px;
+}
+.testimonials__leaf {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  color: #BDBDBD;
+}
+.comment__header {
+  display: flex;
+  margin-bottom: 10px;
+}
+.comment__logo {
+  flex: 0 0 37px;
+}
+.comment__title {
+  margin-left: 10px;
+  flex: 1 1 auto;
+}
+.comment__name {
+  font-size: 16px;
+  line-height: 120%;
+  font-weight: 400;
+  color: #000000;
+}
+.comment__subtitle {
+  display: flex;
+  justify-content: start;
+}
+.comment__local {
+  margin-right: 6px;
+}
+.comment__dot {
+  margin-right: 6px;
+}
+.comment__day {
+  margin-right: 0;
+}
+.bar {
+  width: 599px;
+  height: 8px;
+  background: #F5F7F6;
+  border: 0.5px solid rgba(254, 189, 171, 0.74);
+  border-radius: 5px;
+  margin: 21px auto 31px auto;
+  position: relative;
+}
+.bar__progress {
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  width: 115.19px;
+  height: 6px;
+  background: #FE9013;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.footer {
+  background: #111115;
+  max-height: 443px;
+  padding: 41px 0 50px 0;
+}
+.footer__header {
+  display: flex;
+  margin-bottom: 36px;
+}
+.footer__form {
+  margin-left: 711px;
+  flex: 1 1 auto;
+}
+.footer__button {
+  margin-bottom: 44px;
+}
+.footer__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer__menu {
+  margin-left: 298px;
+}
+.footer__info {
+  margin-left: 160px;
+  line-height: 130%;
+  /* identical to box height, or 21px */
+  color: #FFFFFF;
+}
+.footer__designby {
+  font-weight: 100;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.footer__copy {
+  font-weight: 100;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.subscribe__title {
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+.subscribe__form {
+  display: flex;
+}
+.subscribe__email {
+  flex: 0 1 228px;
+  padding: 10px 0 10px 10px;
+  border: 0.7px solid rgb(249, 128, 75);
+  border-radius: 2px;
+  background: #FFFFFF;
+}
+.subscribe__button {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F1F3F2;
+  border: 1px solid rgb(51, 59, 65);
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.socials__item {
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 10px;
+}
+.socials__item:last-child {
+  margin-bottom: 0;
+}
+.socials__item::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+.socials__item_facebook::before {
+  background-image: url(../../img/facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.socials__item_twitter::before {
+  background-image: url(../../img/twitter.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.socials__item_instagram::before {
+  background-image: url(../../img/insta.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.socials__item_youtube::before {
+  background-image: url(../../img/youtube.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.socials__link {
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
 }
