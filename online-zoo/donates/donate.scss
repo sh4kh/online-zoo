@@ -58,7 +58,7 @@ h1 {
 }
 
 .button {
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    background: orange;
     border-radius: 25px;
     min-height: 54px;
     width: 298px;
@@ -72,6 +72,11 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    &:hover {
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        transition: background-color 0.5s linear;
+    }
 
     &_square {
         border-radius: 5px;
@@ -142,6 +147,73 @@ h1 {
     height: 390px;
     width: 100%;
 }
+
+.page {
+
+    &__background {
+    }
+
+    &__pick-and-feed {
+        background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+        opacity: 0.9;
+    }
+}
+.pick-and-feed {
+
+    padding: 40px 0 180px 0;
+
+    &__container {
+        background: rgba(253, 253, 255, 0.52);
+        border-radius: 20px;
+        padding: 49px 0 59px 0;
+        text-align: center;
+    }
+
+    &__tagline {
+    }
+
+    &__text {
+    }
+
+    &__donate {
+    }
+}
+.donate {
+
+    &__title {
+    }
+
+    &__content {
+    }
+
+    &__form {
+    }
+
+    &__amount {
+        margin: 0 auto;
+        border: 1px solid #929699;
+        border-radius: 2px;
+    }
+
+    &__selector {
+    }
+
+    &__option {
+    }
+
+    &__button {
+    }
+}
+.main {
+
+    &__title {
+    }
+
+    &__subtitle {
+    }
+}
+
+
 
 
 //==============FOOTER============
