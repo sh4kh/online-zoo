@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+.title {
     font-family: 'Roboto';
     font-size: 19.0145px;
     line-height: 120%;
@@ -136,7 +136,7 @@ h1 {
 
 	&__content {
         padding-top: 86px;
-        margin-left: 661px;
+        margin-left: 648px;
         padding-bottom: 100px;
         width: 531px;
         text-align: center;
@@ -644,6 +644,7 @@ h1 {
 
 
 //==============FOOTER============
+//==============FOOTER============
 .footer {
 
     background: #111115;
@@ -688,6 +689,11 @@ h1 {
         line-height: 130%;
         /* identical to box height, or 21px */
         color: #FFFFFF;
+        cursor: pointer;
+        &:hover {
+            color: #4B9200;
+            text-decoration: underline;
+        }
     }
 
     &__designby {
@@ -723,10 +729,6 @@ h1 {
         border: 0.7px solid rgba(249, 128, 75, 1);
         border-radius: 2px;
         background: #FFFFFF;
-
-        &:focus {
-            border: 0.7px solid #4B9200;
-        }
     }
 
     &__button {
@@ -740,12 +742,7 @@ h1 {
         margin-left: 10px;
         font-size: 16px;
         line-height: 140%;
-        color: #000000;
-
-        &:hover {
-           color:  #4B9200;
-           border: 1px solid #4B9200;
-        }
+        color: #000000;;
     }
 }
 
@@ -759,7 +756,7 @@ h1 {
     &__item {
         position: relative;
         padding-left: 38px;
-        margin-bottom: 10px;
+        margin-bottom: 13px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -809,23 +806,11 @@ h1 {
 
         &:hover {
             text-decoration: underline;
+            color: #4B9200;
         }
     }
 }
-.menu {
 
-    &__list {
-    }
-
-    &__item {
-    }
-
-    &__link {
-
-        &_active {
-        }
-    }
-}
 
 
 

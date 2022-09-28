@@ -117,7 +117,7 @@ body {
   margin: 0 auto;
 }
 
-h1 {
+.title {
   font-family: "Roboto";
   font-size: 19.0145px;
   line-height: 120%;
@@ -209,8 +209,8 @@ h1 {
   /* or 22px */
   color: #FFFFFF;
 }
-.menu__link_active {
-  color: #F9804B;
+.menu__link:hover {
+  text-decoration: underline;
 }
 
 .page__background {
@@ -269,6 +269,11 @@ h1 {
   line-height: 130%;
   /* identical to box height, or 21px */
   color: #FFFFFF;
+  cursor: pointer;
+}
+.footer__info:hover {
+  color: #4B9200;
+  text-decoration: underline;
 }
 .footer__designby {
   font-weight: 100;
@@ -314,7 +319,7 @@ h1 {
 .socials__item {
   position: relative;
   padding-left: 38px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 .socials__item:last-child {
   margin-bottom: 0;
@@ -354,4 +359,8 @@ h1 {
   font-size: 16px;
   line-height: 140%;
   color: #FFFFFF;
+}
+.socials__link:hover {
+  text-decoration: underline;
+  color: #4B9200;
 }
