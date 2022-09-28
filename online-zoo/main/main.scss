@@ -102,7 +102,6 @@ body {
         font-weight: 500;
         font-size: 16px;
         line-height: 140%;
-        /* or 22px */
         color: #FFFFFF;
 
         &:hover {
@@ -644,7 +643,6 @@ body {
 
 
 //==============FOOTER============
-//==============FOOTER============
 .footer {
 
     background: #111115;
@@ -674,18 +672,19 @@ body {
     &__footer {
         display: flex;
         align-items: flex-end;
-        justify-content: space-between;
     }
 
     &__socials {
     }
 
     &__menu {
+        flex: 1 1 auto;
         margin-left: 298px;
     }
 
     &__info {
-        margin-left: 160px;
+        flex: 0 1 230px;
+        display: inline-block;
         line-height: 130%;
         /* identical to box height, or 21px */
         color: #FFFFFF;
@@ -697,6 +696,7 @@ body {
     }
 
     &__designby {
+        display: inline-block;
         font-weight: 100;
         font-size: 16px;
         margin-bottom: 10px;
@@ -704,6 +704,7 @@ body {
     }
 
     &__copy {
+        display: inline-block;
         font-weight: 100;
         font-size: 16px;
         margin-bottom: 0;

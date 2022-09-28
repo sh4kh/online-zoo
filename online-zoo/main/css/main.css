@@ -182,7 +182,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
   color: #FFFFFF;
 }
 .menu__link:hover {
@@ -607,13 +606,14 @@ body {
 .footer__footer {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
 }
 .footer__menu {
+  flex: 1 1 auto;
   margin-left: 298px;
 }
 .footer__info {
-  margin-left: 160px;
+  flex: 0 1 230px;
+  display: inline-block;
   line-height: 130%;
   /* identical to box height, or 21px */
   color: #FFFFFF;
@@ -624,11 +624,13 @@ body {
   text-decoration: underline;
 }
 .footer__designby {
+  display: inline-block;
   font-weight: 100;
   font-size: 16px;
   margin-bottom: 10px;
 }
 .footer__copy {
+  display: inline-block;
   font-weight: 100;
   font-size: 16px;
   margin-bottom: 0;
