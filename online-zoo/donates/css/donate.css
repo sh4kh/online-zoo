@@ -76,8 +76,6 @@ input::-ms-clear {
 button, input[type=submit] {
   display: inline-block;
   box-shadow: none;
-  background-color: transparent;
-  background: none;
   cursor: pointer;
 }
 
@@ -146,12 +144,18 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
   color: #FFFFFF;
+}
+.copy:hover {
+  text-decoration: underline;
+}
+.copy:active {
+  color: #F9804B;
+  text-decoration: none;
 }
 
 .button {
-  background: orange;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   border-radius: 25px;
   min-height: 54px;
   width: 298px;
@@ -167,8 +171,10 @@ body {
   color: #FFFFFF;
 }
 .button:hover {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  transition: background-color 0.5s linear;
+  background: #E47209;
+}
+.button:active {
+  background: #4B9200;
 }
 .button_square {
   border-radius: 5px;
@@ -212,6 +218,16 @@ body {
 .menu__link:hover {
   text-decoration: underline;
 }
+.menu__link:active {
+  color: #F9804B;
+  text-decoration: none;
+}
+.menu__link_active {
+  color: #F9804B;
+}
+.menu__link_active:hover {
+  text-decoration: none;
+}
 
 .page__background {
   background-image: url(../../img/background_panda.jpg);
@@ -229,17 +245,162 @@ body {
 .pick-and-feed {
   padding: 40px 0 180px 0;
 }
-.pick-and-feed__container {
+.pick-and-feed__tagline {
+  font-size: 36px;
+  line-height: 130%;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.pick-and-feed__text {
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+.pick-and-feed__title {
+  font-size: 36px;
+  line-height: 130%;
+  color: #FE9013;
+  margin-bottom: 40px;
+}
+
+.donate {
   background: rgba(253, 253, 255, 0.52);
   border-radius: 20px;
-  padding: 49px 0 59px 0;
+  padding: 49px 92px 59px 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.donate__title {
+  font-size: 48px;
+  line-height: 120%;
   text-align: center;
+  color: #FE9013;
+  margin-bottom: 20px;
+}
+.donate__subtitle {
+  align-self: flex-start;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 60px;
+}
+.donate__panda {
+  margin-bottom: 48px;
 }
 .donate__amount {
-  margin: 0 auto;
+  align-self: flex-start;
+  margin-bottom: 16px;
+}
+.donate__bar {
+  margin-bottom: 50px;
+}
+.donate__form {
+  margin-bottom: 30px;
+}
+.donate__button {
+  margin-bottom: 30px;
+}
+.panda {
+  display: flex;
+}
+.panda__count {
+  padding-top: 105px;
+  margin-right: 11px;
+}
+.panda__number {
+  font-size: 72px;
+  line-height: 80%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 15px;
+}
+.panda__multiply {
+  padding-top: 130px;
+  margin-right: 64px;
+}
+.progress {
+  width: 100%;
+  position: relative;
+}
+.progress__bg {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 27px;
+  background-color: #333b41;
+  top: 6px;
+  left: 0;
+  z-index: 1;
+}
+.progress__bar {
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+  display: flex;
+}
+.progress__bar::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  left: 4%;
+  width: 93.75%;
+  height: 2px;
+  background: #72828E;
+  z-index: -1;
+}
+.progress__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.progress__dot-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.progress__dot-container:hover {
+  background: url(/img/roller_icon.svg) no-repeat center;
+}
+.progress__dot-container:hover + .progress__sub-item {
+  color: #FE9013;
+}
+.progress__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFEE2E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress__sub-item {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: #333B41;
+}
+
+.donate-form__amount {
+  width: 268px;
+  display: block;
   border: 1px solid #929699;
   border-radius: 2px;
+  padding: 16px 0 16px 9px;
+  margin-bottom: 25px;
 }
+.donate-form__option {
+  display: flex;
+  justify-content: space-around;
+}
+.donate-form__option input {
+  border: 1px solid #FE9013;
+}
+
 .footer {
   background: #111115;
   max-height: 443px;
@@ -259,13 +420,14 @@ body {
 .footer__footer {
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
 }
 .footer__menu {
+  flex: 1 1 auto;
   margin-left: 298px;
 }
 .footer__info {
-  margin-left: 160px;
+  flex: 0 1 230px;
+  display: inline-block;
   line-height: 130%;
   /* identical to box height, or 21px */
   color: #FFFFFF;
@@ -276,11 +438,13 @@ body {
   text-decoration: underline;
 }
 .footer__designby {
+  display: inline-block;
   font-weight: 100;
   font-size: 16px;
   margin-bottom: 10px;
 }
 .footer__copy {
+  display: inline-block;
   font-weight: 100;
   font-size: 16px;
   margin-bottom: 0;
@@ -296,24 +460,33 @@ body {
   display: flex;
 }
 .subscribe__email {
+  display: block;
   flex: 0 1 228px;
   padding: 10px 0 10px 10px;
   border: 0.7px solid rgb(249, 128, 75);
   border-radius: 2px;
   background: #FFFFFF;
 }
+.subscribe__email:invalid + .subscribe__button {
+  border: 0.7px solid red;
+  color: red;
+}
+.subscribe__email:valid + .subscribe__button {
+  border: 1px solid rgb(51, 59, 65);
+  color: #000000;
+}
 .subscribe__button {
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #F1F3F2;
   border: 1px solid rgb(51, 59, 65);
   border-radius: 5px;
   margin-left: 10px;
   font-size: 16px;
   line-height: 140%;
   color: #000000;
+  background: #F1F3F2;
 }
 
 .socials__item {

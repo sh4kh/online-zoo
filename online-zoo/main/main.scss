@@ -14,12 +14,13 @@ body {
 }
 
 .wrapper {
-    min-height: 100%;
     overflow: hidden;
+    min-height: 100%;
 }
 
 ._container {
-    max-width: 1160px;
+    max-width: 1190px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -53,8 +54,19 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
-    color: #FFFFFF
+    color: #FFFFFF;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+    &:active {
+        color:#F9804B;
+        text-decoration: none;
+    }
+}
+
+.burger {
+    display: none;
 }
 
 //========HEADER===========================================================
@@ -63,6 +75,8 @@ body {
     left: 0px;
     top: 0px;
     background: #000000;
+    position: relative;
+    z-index: 20;
 
     &__container {
         display: flex;
@@ -108,6 +122,11 @@ body {
             text-decoration: underline;
         }
 
+        &:active {
+            color:#F9804B;
+            text-decoration: none;
+        }
+
         &_active {
             &:hover {
                 text-decoration: none;
@@ -127,15 +146,17 @@ body {
 }
 .main-block {
     
-    background-image: url("/sh4kh-JSFE2022Q3/online-zoo/img/background_panda.jpg");
+    background-image: url("/img/background_panda.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top;
     &__container {
+        display: flex;
+        justify-content: flex-end;
     }
 
 	&__content {
         padding-top: 86px;
-        margin-left: 648px;
         padding-bottom: 100px;
         width: 531px;
         text-align: center;
@@ -154,7 +175,7 @@ body {
             width: 465px;
             height: 465px;
             top: -76px;
-            left: -70px;
+            left: -60px;
             border-radius: 50%;
             /* orange */
             background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -185,7 +206,7 @@ body {
 
 
 .button {
-    background: orange;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);;
     border-radius: 25px;
     min-height: 54px;
     width: 298px;
@@ -199,10 +220,15 @@ body {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+
     &:hover {
-        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-        transition: background-color 0.5s linear;
+        background: #E47209;
     }
+
+    &:active {
+        background: #4B9200;
+    }
+
 
     &_square {
         border-radius: 5px;
@@ -228,7 +254,7 @@ body {
 
     &__container {
         padding-top: 140px;
-        padding-bottom: 180px;
+        padding-bottom: 90px;
 
         display: flex;
     }
@@ -265,114 +291,107 @@ body {
 }
 
 
-//======ANIMALS===========
+//======PETS===========
 .page {
-
-    &__animals {
+    &__pets {
     }
 }
-.animals {
+
+.pets {
+    position: relative;
+    padding: 90px 0 100px 0;
 
     &__container {
-    }
-
-    &__row {
         display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-        position: relative;
-
-        &::before {
-            content: '';
-            position: absolute;
-            left: -82px;
-            top: 350px;
-            width: 62px;
-            height: 62px;
-            background-color: orange;
-            background-image: url(../../img/left_arrow.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            right: -82px;
-            top: 350px;
-            width: 62px;
-            height: 62px;
-            background-color: orange;
-            border-radius: 50%;
-            background-image: url(../../img/right__arrow.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            cursor: pointer;
-        }
+        flex-direction: column;
+        align-items: center;
     }
 
-    &__column {
-        padding: 0 15px;
-        flex: 0 1 33.333%;
-        margin-bottom: 20px;
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 30px;
+        margin-bottom: 80px;
+
+        position: relative;
     }
 
     &__item {
-        border: 1px solid #FA6F32;
-        border-radius: 5px;
     }
-
+    //====MAIN BUTTON======
     &__button {
-        margin:  80px auto 100px auto;
     }
 }
 
-.animal {
-    position: relative;
-    &:hover  &__info {
-        opacity: 1;
-    }
-    &:hover  &__image_bg {
-        opacity: 1;
-    }
+//========PET CARD========================
+.pet {
+    max-width: 366px;
+    max-height: 426px;
+    border: 1px solid rgba(250, 111, 50, 1);
+    border-radius: 5px;
+    overflow: hidden;
+    
+
+
     &__image {
         position: relative;
+        overflow: hidden;
+        
+        
+
+        &:hover img {
+            transform: scale(1.05);
+            transition: 200ms linear;
+        }
+
+        & img {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        &_popup {
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+            z-index: 3;
+            transition: all 0.8s ease;
+            
+        }
         &_bg {
-            height: 302.66px;
+            height: 100%;
             width: 100%;
             position: absolute;
             left: 0;
             top: 0;
-            background-color:rgba(0, 0, 0, 0.379);
+            background-color: rgba(0, 0, 0, 0.379);
             z-index: 1;
             opacity: 0;
         }
-        overflow: hidden;
-        &:hover img {
-            transform: scale(1.1);
-            transition: 200ms linear;
+
+        &:hover &_bg {
+            opacity: 1;
+            transition: opacity 0.7s ease;
         }
+
+        &:hover &_popup {
+            transform: translateY(-110px);
+            opacity: 1;
+            
+            
+            
+            
+           
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 13px 14px 16px;
     }
 
     &__info {
-        background-color: #FFFFFF;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 12px 13px 16px;
-        opacity: 0;
-
-        transition: opacity 0.5s ease;
-
-
-    }
-
-    &__text {
         color: #000000;
     }
 
@@ -380,24 +399,90 @@ body {
         font-weight: 500;
         font-size: 16px;
         line-height: 140%;
-        /* or 22px */
         text-transform: uppercase;
     }
 
-    &__home {
+    &__native {
         font-weight: 300;
         font-size: 15px;
         line-height: 120%;
     }
 
-    &__logo {
+    &__food {
+    }
+
+        //====SLIDER BUTTONS=========
+        &__arrow {
+            position: absolute;
+            top: 46.5%;
+            display: block;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+            
+            & img {
+                vertical-align: middle;
+            }
+            &_left {
+                left: -80px;
+            }
+            &_right {
+                right: -80px;
+            }
+
+            &:active {
+                background: #4B9200;
+            }
+        }
+}
+
+.pet-popup {
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px 15px 10px;
+    opacity: 0;
+    &__button {
+        padding: 4px 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #F1F3F2;
+        border-radius: 5px;
+        margin-top: 11px;
+        color: #4B9200;
     }
 }
+//======PLANTS ON PETS PAGE===================
+.pets__palm {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.pets__strelitzia {
+    position: absolute;
+    bottom: 0; 
+    right: 0;
+}
+
+
+
 
 
 //=============PICK AND FEED==================
 .page {
-
     &__pick-and-feed {
         background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
         opacity: 0.9;
@@ -406,12 +491,15 @@ body {
 .pick-and-feed {
 
     padding: 69px 0 100px 0;
-
+    
     &__container {
         background: rgba(253, 253, 255, 0.52);
         border-radius: 20px;
-        padding: 49px 0 59px 0;
+        padding: 49px 0 59px 0px;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__title {
@@ -430,8 +518,18 @@ body {
         /* identical to box height, or 29px */
         color: #333B41;
         margin-bottom: 40px;
-        margin-left: 99px;
         text-align: left;
+        padding-left: 99px;
+    }
+
+    &__subsubtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        color: #333B41;
+        margin-bottom: 10px;
+        text-align: left;
+        padding-left: 99px;
     }
 
     &__text {
@@ -440,13 +538,15 @@ body {
         line-height: 130%;
         /* or 21px */
         color: #333B41;
-        margin-left: 99px;
         margin-bottom: 10px;
         text-align: left;
+        padding-left: 99px;
+        padding-right: 68px;
 
         & a {
             color: inherit;
             text-decoration: underline;
+            text-decoration-color: orange;
         }
 
         &:last-child {
@@ -455,7 +555,7 @@ body {
     }
 
     &__how {
-        margin: 60px 198px;
+        margin: 60px 0;
     }
 
     &__button {
@@ -463,8 +563,9 @@ body {
     }
 }
 .how {
-
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__title {
         font-weight: 400;
         font-size: 36px;
@@ -476,11 +577,16 @@ body {
 
     &__row {
         display: flex;
+        justify-content: center;
         align-self: center;
     }
 
     &__column {
-        flex: 1 1 20%;
+        flex: 0 1 168px;
+
+        &_arrow {
+            flex: 0 1 130px;
+        }
     }
 
     &__item {
@@ -504,7 +610,10 @@ body {
     }
 
     &__arrow {
-        padding-top: 67px;
+        padding-top: 63px;
+        &_green {
+            display: none;
+        }
     }
 }
 
@@ -521,6 +630,9 @@ body {
     padding: 140px 0 180px 0;
 
     &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__title {
@@ -542,19 +654,36 @@ body {
     &__column {
         flex: 1 1 25%;
         padding: 0 15px;
+        display: flex;
     }
 
     &__item {
-        background: #F1F3F2;
+        background:  #F1F3F2;
         border-radius: 20px;
-        border: 2px solid rgba(254, 189, 171, 0.74);
         padding: 15px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+            -webkit-mask: linear-gradient(#f1f3f2 0 0) padding-box, linear-gradient(#f1f3f2 0 0);
+            -webkit-mask-composite: destination-out;
+        }
+
     }
 
     &__bar {
     }
 
     &__button {
+        align-self: flex-start;
     }
 
     &__leaf {
@@ -612,35 +741,33 @@ body {
     &__text {
     }
 }
-.bar {
+
+input[type=range]  {
+    margin: 30px auto;
+    width: 600px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    overflow: hidden;
+    height: 7px;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 7px;
+    border-radius: 20px;
+    border: 1px solid pink;
+    border-image: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%) border-box;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    background: orange;
     cursor: pointer;
-    width: 599px;
-    height: 8px;
-    background: #F5F7F6;
-    border: 0.5px solid rgba(254, 189, 171, 0.74);
-    border-radius: 5px;
-    margin: 21px auto 31px auto;
-    position: relative;
-
-    &:hover &__progress {
-        opacity: 1;
-    }
-
-    &__progress {
-        opacity: 0;
-        position: absolute;
-        top: 0.5px;
-        left: 0;
-        width: 115.19px;
-        height: 6px;
-        background: #FE9013;
-        z-index: 10;
-        border-radius: 5px;
-
-        transition: opacity 1s ease-in;
-    }
-}
-
+    border-radius: 20px;
+    width: 116px;
+    height: 6px;
+    -webkit-appearance: none;
+  }
 
 //==============FOOTER============
 .footer {
@@ -654,6 +781,7 @@ body {
 
     &__header {
         display: flex;
+        justify-content: space-between;
         margin-bottom: 36px;
     }
 
@@ -661,8 +789,7 @@ body {
     }
 
     &__form {
-        margin-left: 711px;
-        flex: 1 1 auto;
+        flex: 0 1 367px;
     }
 
     &__button {
@@ -678,7 +805,7 @@ body {
     }
 
     &__menu {
-        flex: 1 1 auto;
+        flex: 1 1 380px;
         margin-left: 298px;
     }
 
@@ -693,6 +820,7 @@ body {
             color: #4B9200;
             text-decoration: underline;
         }
+        margin-left: 5px;
     }
 
     &__designby {
@@ -725,11 +853,21 @@ body {
     }
 
     &__email {
+        display: block;
         flex: 0 1 228px;
         padding: 10px 0 10px 10px;
         border: 0.7px solid rgba(249, 128, 75, 1);
         border-radius: 2px;
         background: #FFFFFF;
+
+        &:invalid + .subscribe__button {
+            border: 0.7px solid red;
+            color: red;
+        }
+        &:valid + .subscribe__button {
+            border: 1px solid rgba(51, 59, 65, 1);
+            color: #000000
+        }
     }
 
     &__button {
@@ -737,15 +875,16 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #F1F3F2;
         border: 1px solid rgba(51, 59, 65, 1);
         border-radius: 5px;
         margin-left: 10px;
         font-size: 16px;
         line-height: 140%;
-        color: #000000;;
+        color: #000000;
+        background: #F1F3F2;
     }
 }
+
 
 .socials {
 
@@ -811,6 +950,15 @@ body {
         }
     }
 }
+
+.socials-mobile {
+    display: none;
+}
+
+@import "adaptiveDesktop";
+@import "smallDesktop";
+@import "tablet";
+
 
 
 
