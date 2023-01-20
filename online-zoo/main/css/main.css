@@ -104,6 +104,18 @@ body {
   line-height: 140%;
   background-color: #FFFFFF;
 }
+body._active .background_dark {
+  display: block;
+}
+
+.background_dark {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  z-index: 20;
+}
 
 .wrapper {
   overflow: hidden;
@@ -165,7 +177,8 @@ body {
   top: 0px;
   background: #000000;
   position: relative;
-  z-index: 20;
+  z-index: 22;
+  transition: background-color 0.2s linear;
 }
 .header__container {
   display: flex;
@@ -174,9 +187,65 @@ body {
 }
 .header__menu {
   margin-left: 63px;
+  transition: opacity 30s linear;
 }
 .header__copy {
   margin-left: 438px;
+}
+
+.header._active {
+  background: white;
+  max-height: 300px;
+  transition: background-color 0.2s linear;
+}
+.header._active .logo {
+  border: 1px solid #FE9013;
+  width: 60px;
+}
+.header._active .title {
+  color: #FE9013;
+}
+.header._active .header__container {
+  padding-top: 3px;
+  padding-bottom: 40px;
+  align-items: center;
+}
+.header._active .header__menu {
+  display: block;
+  margin-left: 600px;
+  transform: translateX(-600px);
+  margin-top: 30px;
+}
+.header._active .menu__list {
+  flex-direction: column;
+  gap: 15px;
+}
+.header._active .menu__list:last-child {
+  margin-bottom: 15px;
+}
+.header._active .menu__link {
+  color: black;
+}
+.header._active .copy {
+  display: block;
+  color: #000000;
+  margin-left: 0;
+}
+.header._active .burger {
+  justify-content: center;
+}
+.header._active .burger span {
+  opacity: 0;
+}
+.header._active .burger::before, .header._active .burger::after {
+  background: #FE9013;
+  transition: transform 0.2s linear;
+}
+.header._active .burger::before {
+  transform: rotate(-45deg) translateY(3px);
+}
+.header._active .burger::after {
+  transform: rotate(45deg) translateY(-3px);
 }
 
 .menu__list {
@@ -1040,6 +1109,7 @@ input[type=range]::-webkit-slider-thumb {
   .header__container {
     justify-content: space-between;
     min-height: 34px;
+    flex-wrap: wrap;
   }
   .main-block__content {
     padding-top: 117px;
