@@ -178,7 +178,6 @@ body._active .background_dark {
   background: #000000;
   position: relative;
   z-index: 22;
-  transition: background-color 0.2s linear;
 }
 .header__container {
   display: flex;
@@ -187,7 +186,6 @@ body._active .background_dark {
 }
 .header__menu {
   margin-left: 63px;
-  transition: opacity 30s linear;
 }
 .header__copy {
   margin-left: 438px;
@@ -196,7 +194,7 @@ body._active .background_dark {
 .header._active {
   background: white;
   max-height: 300px;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.5s ease;
 }
 .header._active .logo {
   border: 1px solid #FE9013;
