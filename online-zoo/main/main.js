@@ -3,16 +3,11 @@
 const burger = document.getElementById('burger');
 const header = document.getElementById('header');
 
-burger.onclick = function(event) {
-    header.classList.toggle('_active');
-    document.body.classList.toggle('_active')
-}
-
-document.onclick = function(event) {
-    if (!header.contains(event.target)) {
+document.onclick = showBurger;
+    
+function showBurger(event) {
+    if (!header.contains(event.target) || event.target == burger) {
         header.classList.toggle('_active');
         document.body.classList.toggle('_active')
     }
 }
-
-console.log(burger);

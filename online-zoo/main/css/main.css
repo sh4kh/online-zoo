@@ -111,7 +111,7 @@ body._active .background_dark {
 .background_dark {
   display: none;
   width: 100%;
-  height: 100%;
+  height: 4000px;
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   z-index: 20;
@@ -200,7 +200,7 @@ body._active .background_dark {
 }
 .header._active .logo {
   border: 1px solid #FE9013;
-  width: 60px;
+  flex: 0 1 auto;
 }
 .header._active .title {
   color: #FE9013;
