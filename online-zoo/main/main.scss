@@ -11,12 +11,6 @@ body {
     font-size: 16px;
     line-height: 140%;
     background-color: #FFFFFF;
-
-    &._active {
-        .background_dark {
-            display: block;
-        }
-    }
 }
 
 .background_dark {
@@ -61,6 +55,10 @@ body {
         height: 22.58px;
         left: 8px;
         top: 18.64px;
+
+        &_orange {
+            display: none;
+        }
     }
 }
 
@@ -107,91 +105,15 @@ body {
     &__menu {
         margin-left: 63px;
     }
-
-    &__copy {
-        margin-left: 438px;
-    }
 }
-
-.header{
-    &._active {
-
-        background: white;
-        max-height: 300px;
-
-        transition: background-color 0.5s ease;
-
-
-        .logo {
-            border: 1px solid #FE9013;
-            flex: 0 1 auto;
-        }
-        
-        .title {
-            color: #FE9013;
-        }
-
-        .header__container {
-            padding-top: 3px;
-            padding-bottom: 40px;
-            align-items: center;
-        }
-    
-        .header__menu {
-            display: block;
-            margin-left: 600px;
-            transform: translateX(-600px);
-            margin-top: 30px;
-        }
-
-        .menu__list {
-            flex-direction: column;
-            gap: 15px;
-
-            &:last-child {
-                margin-bottom: 15px;
-            }
-        }
-
-        .menu__link {
-            color: black;
-        }
-
-        .copy {
-            display: block;
-            color: #000000;
-            margin-left: 0;
-        }
-    
-        .burger {
-            justify-content: center;
-            span {
-                opacity: 0;
-            }
-            &::before, &::after {
-                background: #FE9013;
-                transition: transform 0.2s linear;
-            }
-    
-            &::before {
-                transform: rotate(-45deg) translateY(3px);
-            }
-    
-            &::after {
-                transform: rotate(45deg) translateY(-3px);
-            }
-        }
-    }
-}
-
-
-
 
 .menu {
-
+    display: flex;
+    flex: 0 1 1021px;
+    justify-content: space-between;
     &__list {
         display: flex;
-
+        align-items: center;
     }
 
     &__item {

@@ -3,12 +3,6 @@
         max-width: 970px;
     }
 
-    .header {
-        &__copy {
-            margin-left: 10px;
-        }
-    }
-
     .menu {
         &__item {
             margin-right: 48px;
@@ -174,3 +168,21 @@
         }
     }
 }
+
+@media (max-width: 740px) {
+    .header {
+        &__menu {
+            margin-left: 40px;
+        }
+    }
+
+    .menu {
+        &__item {
+            margin-right: 30px;
+        }
+    }
+}
+
+
+
+
