@@ -104,6 +104,9 @@ body {
   line-height: 140%;
   background-color: #FFFFFF;
 }
+body._active {
+  overflow: hidden;
+}
 
 .background_dark {
   display: none;

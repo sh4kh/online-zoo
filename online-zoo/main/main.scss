@@ -11,6 +11,10 @@ body {
     font-size: 16px;
     line-height: 140%;
     background-color: #FFFFFF;
+
+    &._active {
+        overflow: hidden;
+    }
 }
 
 .background_dark {
