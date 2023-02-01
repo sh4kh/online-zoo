@@ -322,6 +322,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+    }
+
+    &__body {
+        margin-bottom: 80px;
+        overflow: hidden;
+        position: relative;
+        width: 1158px;
+        height: 872px;
     }
 
     &__cards {
@@ -330,15 +339,43 @@ body {
         grid-template-rows: 1fr 1fr;
         row-gap: 20px;
         column-gap: 30px;
-        margin-bottom: 80px;
-
-        position: relative;
+        min-width: 100%;
+        
+        transition: all 1s ease;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     &__item {
     }
     //====MAIN BUTTON======
     &__button {
+    }
+
+    //====SLIDER BUTTONS=========
+    &__arrow {
+        position: absolute;
+        top: 40%;
+        display: block;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        
+        & img {
+            vertical-align: middle;
+        }
+        &_left {
+            left: -80px;
+        }
+        &_right {
+            right: -80px;
+        }
+
+        &:active {
+            background: #4B9200;
+        }
     }
 }
 
@@ -427,31 +464,6 @@ body {
 
     &__food {
     }
-
-        //====SLIDER BUTTONS=========
-        &__arrow {
-            position: absolute;
-            top: 46.5%;
-            display: block;
-            width: 62px;
-            height: 62px;
-            border-radius: 50%;
-            background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-            
-            & img {
-                vertical-align: middle;
-            }
-            &_left {
-                left: -80px;
-            }
-            &_right {
-                right: -80px;
-            }
-
-            &:active {
-                background: #4B9200;
-            }
-        }
 }
 
 .pet-popup {

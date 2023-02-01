@@ -53,48 +53,95 @@ function initPetsSlider() {
         pet[i] = petsCards[i].cloneNode(true);
     }
     petsCards[0].parentElement.remove();
-    shuffle(pet);
 
 }
 
+let offset = 0;
+let sliderWrap = document.querySelector('.pets__body');
+let sliderWidth = sliderWrap.offsetWidth;
+console.log(sliderWidth);
 
 
 function drawPet() {
-    let step = 0;
-    let offset = 0;
-    let petNextButton = document.querySelector('.pet__arrow_right');
-    let petPreviousButton = document.querySelector('.pet__arrow_left');
-
-    console.log(petNextButton);
-    console.log(petPreviousButton);
-    
-    
-    let container = document.querySelector('.pets__container');
-    let containerWidth = container.clientWidth;
-
-    initPetsSlider();
-
-    
-
     let petCard = document.createElement('div');
     petCard.classList.add('pets__cards');
-    petCard.style.left = offset * containerWidth + 'px';
-    container.prepend(petCard);
+    petCard.style.left = offset * 1158 + 'px';
+    sliderWrap.append(petCard);
+    let pet2 = [];
 
-    for (let elem of pet) {
-        petCard.append(elem);
+    for (let i = 0; i < pet.length; i++) {
+        pet2[i] = pet[i].cloneNode(true);
+        petCard.append(pet2[i]);
     }
-    petCard.append(petNextButton);
-    petCard.append(petPreviousButton);
-    
+    shuffle(pet);
 }
 
 
-let petNextButton = document.querySelector('.pet__arrow_right');
-let petPreviousButton = document.querySelector('.pet__arrow_left');
+function drawPetRight() {
+    offset = 1;
+    drawPet();
+};
+
+function drawPetLeft() {
+    offset = -1;
+    drawPet();
+};
 
 
-petNextButton.onclick = drawPet;
-petPreviousButton.onclick = drawPet;
+
+function petLeft() {
+    petNextButton.onclick = null;
+    drawPetRight();
+    setTimeout(function() {
+        let petCards = document.querySelectorAll('.pets__cards');
+        let offset2 = 0;
+        for (let i = 0; i < petCards.length; i++) {
+            petCards[i].style.left = offset2 * 1158 - 1158 + 'px';
+            offset2++;
+        }
+        setTimeout(function() {
+            petCards[0].remove();
+            petNextButton.onclick = petLeft;
+        }, 1000);
+    })
+}
+
+
+function petRight() {
+    petPreviousButton.onclick = null;
+    drawPetLeft();
+    setTimeout(function() {
+        let petCards = document.querySelectorAll('.pets__cards');
+        let offset2 = 2;
+        for (let i = 0; i < petCards.length; i++) {
+            petCards[i].style.left = offset2 * 1158 - 1158 + 'px';
+            offset2--;
+        }
+        setTimeout(function() {
+            petCards[0].remove();
+            petPreviousButton.onclick = petRight;
+        }, 1000);
+    })
+}
+
+
+
+
+initPetsSlider()
+drawPet();
+
+
+
+
+
+
+
+let petNextButton = document.querySelector('.pets__arrow_right');
+let petPreviousButton = document.querySelector('.pets__arrow_left');
+
+petNextButton.onclick = petLeft;
+petPreviousButton.onclick = petRight;
+
+
 
 

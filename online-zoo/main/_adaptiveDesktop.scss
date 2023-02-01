@@ -1,5 +1,43 @@
-@media (max-width: 1440px) {
-    ._container {
-        max-width: 1200px;
+@media (max-width: 1480px) {
+    .backstage {
+        &__flower {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .pets {
+        padding-bottom: 140px;
+
+        &__body {
+            height: 944px;
+        }
+        &__cards {
+            row-gap: 92px;
+            column-gap: 29px;
+        }
+
+        &__arrow_left {
+            left: 410px;
+        }
+
+        &__arrow_right {
+            right: 410px;
+        }
+
+        &__arrow {
+            top: 41%;
+        }
+    }
+}
+
+
+@media (max-width: 1176px) {
+    .backstage {
+        &__content {
+            margin-left: 20px;
+        }
     }
 }

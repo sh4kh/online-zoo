@@ -372,3 +372,38 @@
     }
     
 }
+
+
+@media (max-width: 603px) {
+    .backstage {
+        &__container {
+            padding-top: 104px;
+        }
+    }
+
+    .main-block__button {
+        right: 159px;
+        top: 140px;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .backstage {
+        &__flower {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main-block__button {
+        right: 70px;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-block__button {
+        right: 35px;
+    }
+}
