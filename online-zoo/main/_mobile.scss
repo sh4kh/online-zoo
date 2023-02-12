@@ -1,5 +1,9 @@
 @media (max-width: 350px) {
-    .main-block__button {
-        right: 35px;
-    }
+    .main-block {
+        background-image: url("/img/background_panda_mobile.jpg");
+    
+        &__button {
+            right: 35px;
+        }
+    } 
 }

@@ -675,13 +675,26 @@ body {
         margin-bottom: 47px;
     }
 
+    &__slider {
+        margin: 0 -15px;
+        overflow: hidden;
+        width: 100%;
+        height: 402px;
+        max-width: 1190px;
+        max-height: 500px;
+        position: relative;
+    }
     &__row {
         display: flex;
-        margin: 0 -15px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        transition: left 0.5s linear;
     }
 
     &__column {
-        flex: 1 1 25%;
+        flex: 0 0 290px;
         padding: 0 15px;
         display: flex;
     }
@@ -987,6 +1000,7 @@ input[type=range]  {
 @import "adaptiveDesktop";
 @import "smallDesktop";
 @import "tablet";
+@import "mobile";
 
 
 

@@ -59,7 +59,6 @@ function initPetsSlider() {
 let offset = 0;
 let sliderWrap = document.querySelector('.pets__body');
 let sliderWidth = sliderWrap.offsetWidth;
-console.log(sliderWidth);
 
 
 function drawPet() {
@@ -141,6 +140,48 @@ let petPreviousButton = document.querySelector('.pets__arrow_left');
 
 petNextButton.onclick = petLeft;
 petPreviousButton.onclick = petRight;
+
+
+
+//Testimonials slider 
+
+function makeTestimonialSlider() {
+    let bar = document.getElementById('testimonials-bar');
+    let row = document.getElementById('testimonials-row');
+
+    drawRandomTestimonials(row, 10);
+
+    //вычитаем кол-во видимых карточек на странице, надо ресайз делать
+    bar.max = row.children.length - 4;
+    bar.oninput = function() {
+        let cardWidth = row.firstElementChild.offsetWidth;
+        //умножаем на ширину карточки
+         row.style.left = - cardWidth * this.value + 'px';
+          
+    }
+}
+
+makeTestimonialSlider();
+
+// Генерируем карточки в количестве num в случайном порядке
+function drawRandomTestimonials(elem, num) {
+    let card = [];
+    for (let i = 0; i < num; i++) {
+        let a = randomInteger(0, 3);
+        card.push(elem.children[a].cloneNode(true));
+    }   
+    elem.append(...card);
+}
+
+//Random integer number
+//https://learn.javascript.ru/task/random-int-min-max
+
+function randomInteger(min, max) {
+    // получить случайное число от (min-0.5) до (max+0.5)
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+
 
 
 
