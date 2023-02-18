@@ -1,3 +1,16 @@
+@media (max-width: 1156px) {
+    .pets {
+        &__body {
+            width: 780px;
+            height: 950px;
+            margin-bottom: 60px;
+        }
+        &__cards {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
 @media (max-width: 1000px) {
     ._container {
         max-width: 970px;
@@ -64,30 +77,27 @@
         }
     }
 
-    .pet {
-        //====SLIDER BUTTONS=========
+    .pets {
+        &__palm {
+            left: -15px;
+            width: 194px;
+            height: 200px;
+        }
+        &__strelitzia {
+            width: 241px;
+            height: 180px;
+        }
+
         &__arrow {
-            top: 46.5%;
             &_left {
-                left: 34%;
+                left: 40%;
             }
             &_right {
-                right: 34%;
+                right: 40%;
             }
         }
     }
-
-    .pets__palm {
-        left: -15px;
-        width: 194px;
-        height: 200px;
-    }
     
-    .pets__strelitzia {
-        width: 241px;
-        height: 180px;
-    }
-
     .pick-and-feed {
         padding: 30px 0 50px 0;
         &__container {

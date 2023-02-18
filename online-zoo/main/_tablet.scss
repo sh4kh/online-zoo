@@ -215,6 +215,10 @@
     }
 
     .pets {
+        &__body {
+            width: 604px;
+            height: 800px;
+        }
         padding-top: 80px;
         padding-bottom: 100px;
         &__cards {
@@ -231,6 +235,16 @@
             left: -15px;
             width: 155px;
             height: 202px;
+        }
+
+        &__arrow {
+            top: 40%;
+            &_left {
+                left: 37%;
+            }
+            &_right {
+                right: 37%;
+            }
         }
         
     }
@@ -376,16 +390,48 @@
 
 
 @media (max-width: 603px) {
+    
+    .main-block {
+        &__content {
+            position: relative;
+        }
+        &__button {
+            position: absolute;
+            right: 50%;
+            top: "";
+            bottom: -70px;
+        }
+    }
+    
     .backstage {
         &__container {
             padding-top: 104px;
         }
     }
 
-    .main-block__button {
-        right: 159px;
-        top: 140px;
+    .pets {
+        &__body {
+            height: 1450px;
+            display: flex;
+            justify-content: center;
+            overflow: visible;
+        }
+        &__cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            row-gap: 20px;
+            position: relative;
+            width: 285px;
+            margin-bottom: 0;
+        }
+
+        &__arrow {
+            display: none;
+        }
     }
+
+    
+    
 }
 
 
@@ -397,14 +443,12 @@
     }
 }
 
-@media (max-width: 480px) {
-    .main-block__button {
-        right: 70px;
+
+@media (max-width: 441px) {
+    .main-block {
+        &__button {
+            right: 25%;
+        }
     }
 }
 
-@media (max-width: 360px) {
-    .main-block__button {
-        right: 35px;
-    }
-}

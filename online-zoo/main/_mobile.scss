@@ -1,9 +1,37 @@
 @media (max-width: 350px) {
     .main-block {
         background-image: url("/img/background_panda_mobile.jpg");
-    
+        background-position: top 60px right 0;
+        
+        &__content {
+            padding-top: 83px;
+            padding-bottom: 44px;
+            width: 150px;
+        }
+        &__title {
+            max-width: 130px;
+            &::before {
+                width: 119.09px;
+                height: 119.09px;
+                top: -10px;
+                left: -15px;
+            }
+        }
+        &__text {
+            font-size: 28px;
+        }
         &__button {
-            right: 35px;
+            right: 10px;
         }
     } 
+
+    .backstage {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__subtitle {
+            margin: 20px 0 10px 0;
+        }
+    }
 }

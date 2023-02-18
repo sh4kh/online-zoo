@@ -64,7 +64,7 @@ let sliderWidth = sliderWrap.offsetWidth;
 function drawPet() {
     let petCard = document.createElement('div');
     petCard.classList.add('pets__cards');
-    petCard.style.left = offset * 1158 + 'px';
+    petCard.style.left = offset * sliderWidth + 'px';
     sliderWrap.append(petCard);
     let pet2 = [];
 
@@ -95,7 +95,7 @@ function petLeft() {
         let petCards = document.querySelectorAll('.pets__cards');
         let offset2 = 0;
         for (let i = 0; i < petCards.length; i++) {
-            petCards[i].style.left = offset2 * 1158 - 1158 + 'px';
+            petCards[i].style.left = offset2 * sliderWidth - sliderWidth + 'px';
             offset2++;
         }
         setTimeout(function() {
@@ -113,7 +113,7 @@ function petRight() {
         let petCards = document.querySelectorAll('.pets__cards');
         let offset2 = 2;
         for (let i = 0; i < petCards.length; i++) {
-            petCards[i].style.left = offset2 * 1158 - 1158 + 'px';
+            petCards[i].style.left = offset2 * sliderWidth - sliderWidth + 'px';
             offset2--;
         }
         setTimeout(function() {
@@ -181,6 +181,9 @@ function randomInteger(min, max) {
     let rand = min - 0.5 + Math.random() * (max - min + 1);
     return Math.round(rand);
   }
+
+
+
 
 
 
