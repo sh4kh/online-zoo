@@ -40,4 +40,23 @@
             margin-left: 20px;
         }
     }
+
+    .testimonials {
+        padding: 140px 0;
+        &__slider {
+            max-width: 940px;
+            height: 368px
+        }
+
+        &__column {
+            flex: 0 0 293px
+        }
+
+        input[type=range] {
+            margin: 20px auto 52px 0;
+        }
+        &__button {
+            margin-left: 100px;
+        }
+    }
 }

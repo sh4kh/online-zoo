@@ -628,7 +628,6 @@ body._active {
   margin-bottom: 47px;
 }
 .testimonials__slider {
-  margin: 0 -15px;
   overflow: hidden;
   width: 100%;
   height: 402px;
@@ -643,10 +642,10 @@ body._active {
   top: 0;
   overflow: hidden;
   transition: left 0.5s linear;
+  gap: 29px;
 }
 .testimonials__column {
-  flex: 0 0 290px;
-  padding: 0 15px;
+  flex: 0 0 268px;
   display: flex;
 }
 .testimonials__item {
@@ -915,6 +914,22 @@ input[type=range]::-webkit-slider-thumb {
   .backstage__content {
     margin-left: 20px;
   }
+  .testimonials {
+    padding: 140px 0;
+  }
+  .testimonials__slider {
+    max-width: 940px;
+    height: 368px;
+  }
+  .testimonials__column {
+    flex: 0 0 293px;
+  }
+  .testimonials input[type=range] {
+    margin: 20px auto 52px 0;
+  }
+  .testimonials__button {
+    margin-left: 100px;
+  }
 }
 @media (max-width: 1156px) {
   .pets__body {
@@ -1022,13 +1037,6 @@ input[type=range]::-webkit-slider-thumb {
   .testimonials__title {
     margin-bottom: 30px;
   }
-  .testimonials__column {
-    flex: 1 1 33.333%;
-    display: flex;
-  }
-  .testimonials__column:last-child {
-    display: none;
-  }
   .testimonials__leaf {
     width: 170.98px;
     height: 310.62px;
@@ -1039,6 +1047,9 @@ input[type=range]::-webkit-slider-thumb {
   .testimonials__leaf img {
     width: 100%;
     height: 100%;
+  }
+  .testimonials__button {
+    margin-left: 0;
   }
   .footer__container {
     padding-left: 30px;
@@ -1442,5 +1453,63 @@ input[type=range]::-webkit-slider-thumb {
   }
   .backstage__subtitle {
     margin: 20px 0 10px 0;
+  }
+  .pets__palm {
+    width: 100px;
+    height: 138px;
+  }
+  .pets__strelitzia {
+    width: 140px;
+    height: 100px;
+  }
+  .pick-and-feed {
+    padding: 20px 10px 20px 10px;
+  }
+  .pick-and-feed__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pick-and-feed__title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .pick-and-feed__subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+  .pick-and-feed__subsubtitle {
+    display: none;
+  }
+  .pick-and-feed__text {
+    display: none;
+  }
+  .pick-and-feed__how {
+    margin: 0 0 30px 0;
+  }
+  .pick-and-feed__button {
+    margin: 0 0;
+  }
+  .how__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .how__row {
+    flex-direction: column;
+  }
+  .how__column {
+    max-width: 168px;
+    max-height: 222px;
+  }
+  .how__column:first-child {
+    margin-bottom: 22px;
+  }
+  .how__image {
+    margin-bottom: 10px;
+  }
+  .how__arrow_green {
+    left: 80%;
+    transform: rotate(90deg);
+    top: -23px;
   }
 }

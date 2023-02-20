@@ -144,24 +144,34 @@ petPreviousButton.onclick = petRight;
 
 
 //Testimonials slider 
-
 function makeTestimonialSlider() {
+    let visibleCardsCount;
+    if (document.documentElement.clientWidth < 1176) {
+        visibleCardsCount = 3;
+        console.log(visibleCardsCount);
+    } else {
+        visibleCardsCount = 4;
+        console.log(visibleCardsCount);
+    }
     let bar = document.getElementById('testimonials-bar');
     let row = document.getElementById('testimonials-row');
+    let rowGap = 29;
 
     drawRandomTestimonials(row, 10);
 
     //вычитаем кол-во видимых карточек на странице, надо ресайз делать
-    bar.max = row.children.length - 4;
+    bar.max = row.children.length - visibleCardsCount;
     bar.oninput = function() {
         let cardWidth = row.firstElementChild.offsetWidth;
+        console.log(cardWidth);
+        
         //умножаем на ширину карточки
-         row.style.left = - cardWidth * this.value + 'px';
-          
+         row.style.left = - (cardWidth + rowGap) * this.value  + 'px';
     }
 }
 
 makeTestimonialSlider();
+
 
 // Генерируем карточки в количестве num в случайном порядке
 function drawRandomTestimonials(elem, num) {
@@ -181,7 +191,6 @@ function randomInteger(min, max) {
     let rand = min - 0.5 + Math.random() * (max - min + 1);
     return Math.round(rand);
   }
-
 
 
 
