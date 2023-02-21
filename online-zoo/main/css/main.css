@@ -1065,6 +1065,34 @@ input[type=range]::-webkit-slider-thumb {
     flex: 0 1 129px;
   }
 }
+@media (max-width: 973px) {
+  .testimonials {
+    padding: 60px 0 90px 0;
+  }
+  .testimonials__title {
+    font-size: 47px;
+  }
+  .testimonials__slider {
+    height: 340px;
+    overflow: scroll;
+    margin-bottom: 40px;
+  }
+  .testimonials__row {
+    flex-direction: column;
+    gap: 13px;
+  }
+  .testimonials__column {
+    flex: 0 0 102px;
+    max-height: 102px;
+    overflow: hidden;
+  }
+  .testimonials__bar {
+    display: none;
+  }
+  .testimonials__button {
+    align-self: center;
+  }
+}
 @media (max-width: 740px) {
   .header__menu {
     margin-left: 40px;

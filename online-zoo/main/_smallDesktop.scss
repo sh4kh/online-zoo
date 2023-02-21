@@ -169,6 +169,39 @@
     }
 }
 
+
+@media (max-width: 973px) {
+    .testimonials { 
+        padding: 60px 0 90px 0;
+
+        &__title {
+            font-size: 47px;
+        }
+        &__slider {
+            height: 340px;
+            overflow: scroll;
+            margin-bottom: 40px;
+        }
+        &__row {
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        &__column {
+            flex: 0 0 102px;
+            max-height: 102px;
+            overflow: hidden;
+        }
+
+        &__bar {
+            display: none;
+        }
+
+        &__button {
+            align-self: center;
+        }
+    }
+}
 @media (max-width: 740px) {
     .header {
         &__menu {
