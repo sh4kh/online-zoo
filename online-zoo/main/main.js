@@ -16,8 +16,8 @@ document.addEventListener('click', closeActiveMenu);
 function closeActiveMenu(event) {
     let burger_is_active = header.classList.contains('_active');
     if (!header.contains(event.target) && burger_is_active) {
-        document.body.classList.toggle('_active');
-        header.classList.toggle('_active');
+        document.body.classList.remove('_active');
+        header.classList.remove('_active');
     }
 }
 
