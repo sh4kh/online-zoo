@@ -1,9 +1,53 @@
 @media (max-width: 640px) {
 
-    body {
-        &._active {
-            .background_dark {
-                display: block;
+    body._active {
+
+        .background_dark {
+            display: block;
+        }
+
+        .header {
+
+            .logo {
+                &__image_header {
+                    display: none;
+                }
+                &__image_orange {
+                    display: block;
+                }
+            }
+
+            &__title {
+                color: #FE9013;
+            }
+
+            &__logo {
+                border: 1px solid #FE9013;
+            }
+            &__menu {
+                right: 0;
+            }
+
+            .burger {
+                &::before, &::after {
+                    background-color: #333B41;
+                    width: 80%;
+                }
+    
+                &::before {
+                    top: 50%;
+                    transform: rotate(-45deg) translate(5%, -50%);
+                    
+                }
+    
+                &::after {
+                    bottom: 50%;
+                    transform: rotate(45deg) translate(5%, 50%);
+                }
+    
+                span {
+                    display: none;
+                }
             }
         }
     }
@@ -45,51 +89,6 @@
         }
     }
 
-    .header._active {
-        .burger {
-            &::before, &::after {
-                background-color: #333B41;
-                width: 80%;
-            }
-
-            &::before {
-                top: 50%;
-                transform: rotate(-45deg) translate(5%, -50%);
-                
-            }
-
-            &::after {
-                bottom: 50%;
-                transform: rotate(45deg) translate(5%, 50%);
-            }
-
-            span {
-                display: none;
-            }
-        }
-
-        .header {
-            &__title {
-                color: #FE9013;
-            }
-
-            &__logo {
-                border: 1px solid #FE9013;
-            }
-            &__menu {
-                right: 0;
-            }
-        }
-
-        .logo {
-            &__image_header {
-                display: none;
-            }
-            &__image_orange {
-                display: block;
-            }
-        }
-    }
     
     .burger {
         display: block;
@@ -362,6 +361,10 @@
 
         &__menu {
             margin-left: 0;
+
+            .menu__item {
+                margin-right: 20px;
+            }
         }
     }
 
@@ -380,11 +383,6 @@
         }
     }
 
-    .menu {
-        &__item {
-            margin-right: 37px;
-        }
-    }
     
 }
 

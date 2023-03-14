@@ -202,6 +202,17 @@
         }
     }
 }
+
+@media (max-width: 905px) {
+    .footer {
+        &__menu {
+            margin-left: 5%;
+        }
+    }
+}
+
+
+
 @media (max-width: 740px) {
     .header {
         &__menu {
@@ -215,6 +226,8 @@
         }
     }
 }
+
+
 
 
 

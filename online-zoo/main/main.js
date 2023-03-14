@@ -1,23 +1,23 @@
 "use strict"
 
 //Burger JS
-const burger = document.getElementById('burger');
-const header = document.getElementById('header');
 
-burger.addEventListener('click', showBurger);
+function burgetInit() {
+    const burger = document.getElementById('burger');
+    burger.addEventListener('click', showBurger);
+    document.addEventListener('click', closeActiveMenu);
+}
+
+burgetInit();
     
 function showBurger(event) {
     document.body.classList.toggle('_active');
-    header.classList.toggle('_active');
 }
 
-document.addEventListener('click', closeActiveMenu);
-
 function closeActiveMenu(event) {
-    let burger_is_active = header.classList.contains('_active');
+    let burger_is_active = document.body.classList.contains('_active');
     if (!header.contains(event.target) && burger_is_active) {
         document.body.classList.remove('_active');
-        header.classList.remove('_active');
     }
 }
 
@@ -54,11 +54,24 @@ function initPetsSlider() {
     }
     petsCards[0].parentElement.remove();
 
+
 }
 
 let offset = 0;
 let sliderWrap = document.querySelector('.pets__body');
 let sliderWidth = sliderWrap.offsetWidth;
+
+window.onresize = function() {
+    console.log('resized');
+
+    sliderWidth = sliderWrap.offsetWidth;
+
+    if (document.documentElement.clientWidth < 1176) {
+        visibleCardsCount = 3;
+    } else {
+        visibleCardsCount = 4;
+    }
+}
 
 
 function drawPet() {
@@ -73,6 +86,7 @@ function drawPet() {
         petCard.append(pet2[i]);
     }
     shuffle(pet);
+    
 }
 
 
@@ -124,15 +138,8 @@ function petRight() {
 }
 
 
-
-
-initPetsSlider()
+initPetsSlider();
 drawPet();
-
-
-
-
-
 
 
 let petNextButton = document.querySelector('.pets__arrow_right');
@@ -144,8 +151,10 @@ petPreviousButton.onclick = petRight;
 
 
 //Testimonials slider 
+
+let visibleCardsCount;
+
 function makeTestimonialSlider() {
-    let visibleCardsCount;
     if (document.documentElement.clientWidth < 1176) {
         visibleCardsCount = 3;
         console.log(visibleCardsCount);
