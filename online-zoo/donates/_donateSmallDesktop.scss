@@ -1,0 +1,59 @@
+@media (max-width: 1000px) {
+    ._container {
+        max-width: 970px;
+    }
+
+    .page__background {
+        background-image: url("/img/background_panda_small.png");
+    }
+
+    .menu {
+        &__item {
+            margin-right: 48px;
+        }
+    }
+
+    .footer {
+        &__container {
+            padding-left: 30px;
+        }
+        &__footer {
+            justify-content: space-between;
+        }
+        &__menu {
+            flex: 0 1 380px;
+            margin-left: 15%;
+        }
+    }
+
+    .subscribe {
+        &__button {
+            flex: 0 1 129px;
+        }
+    }
+}
+
+
+@media (max-width: 905px) {
+    .footer {
+        &__menu {
+            margin-left: 5%;
+        }
+    }
+}
+
+
+
+@media (max-width: 740px) {
+    .header {
+        &__menu {
+            margin-left: 40px;
+        }
+    }
+
+    .menu {
+        &__item {
+            margin-right: 30px;
+        }
+    }
+}

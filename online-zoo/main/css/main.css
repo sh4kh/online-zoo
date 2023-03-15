@@ -1548,6 +1548,11 @@ input[type=range]::-webkit-slider-thumb {
   .footer {
     padding: 20px 0 20px 0;
   }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .footer__header {
     flex-direction: column;
     align-items: center;
@@ -1580,7 +1585,7 @@ input[type=range]::-webkit-slider-thumb {
   }
   .footer__footer .footer__info {
     flex: auto;
-    max-width: 240px;
+    max-width: 230px;
     align-self: flex-end;
     margin-left: 0;
   }
