@@ -67,53 +67,53 @@
                                 </div>
                             </div>
                             <h4 class="donate__amount">Amount</h4>
-                            <div class="donate__bar progress">
+                            <div class="donate__bar progress" id="donate-bar">
                                 <div class="progress__bg"></div>
                                 <div class="progress__bar">
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="5000">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$5000</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="2000">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$2000</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="1000">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$1000</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="500">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$500</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="250">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$250</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container progress__dot-active" data-amount="100">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$100</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="50">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$50</div>
                                     </div>
                                     <div class="progress__item">
-                                        <div class="progress__dot-container">
+                                        <div class="progress__dot-container" data-amount="25">
                                             <div class="progress__dot"></div>
                                         </div>
                                         <div class="progress__sub-item">$25</div>
@@ -121,11 +121,12 @@
                                 </div>
                             </div>
                             <form action="#" class="donate__form donate-form">
-                                <input class="donate-form__amount" type="number" maxlength="4" placeholder="Another amount">
+                                <input class="donate-form__amount" id="input-amount" type="number" maxlength="4" placeholder="Another amount" value="100" required>
                                 <div class="donate-form__option"><input type="radio" name="donate">Monthly
                                 <input type="radio" name="donate" checked>Once</div>
+                                <input type="submit" value="Feed a friend now" class="donate__button button">
                             </form>
-                            <a href="#" class="donate__button button">Feed a friend now</a>
+                            
                             <h6 class="donate__footer-text">Share with your friends on social networks</h6>
                         </div>
                     </div>

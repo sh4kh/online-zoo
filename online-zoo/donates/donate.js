@@ -20,3 +20,32 @@ function closeActiveMenu(event) {
         document.body.classList.remove('_active');
     }
 }
+
+
+//Donate Bar
+
+let bar = document.getElementById('donate-bar');
+let inputAmount = document.getElementById('input-amount');
+let selectedItem = document.querySelector('.progress__dot-active');
+
+console.log(selectedItem);
+
+bar.onclick = function(event) {
+
+    let item = event.target.closest('.progress__dot-container');
+
+    if (!item) return;
+
+    highlight(item);
+    inputAmount.value = item.dataset.amount;
+    
+}
+
+//Выделение элемента
+function highlight(elem) {
+    if (selectedItem) {
+        selectedItem.classList.remove('progress__dot-active');
+    }
+    selectedItem = elem;
+    selectedItem.classList.add('progress__dot-active');
+}

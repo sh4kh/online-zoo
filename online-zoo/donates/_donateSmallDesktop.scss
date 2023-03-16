@@ -7,6 +7,28 @@
         background-image: url("/img/background_panda_small.png");
     }
 
+
+    .pick-and-feed {
+        padding: 40px 0 30px 0;
+
+        &__tagline {
+            margin-bottom: 30px;
+        }
+    }
+
+    .progress {
+        width: 810px;
+
+        &__item:first-child {
+            display: none;
+        }
+    }
+
+
+
+
+
+
     .menu {
         &__item {
             margin-right: 48px;
