@@ -121,9 +121,17 @@
                                 </div>
                             </div>
                             <form action="#" class="donate__form donate-form">
-                                <input class="donate-form__amount" id="input-amount" type="number" max="9999" placeholder="Another amount" value="100" required>
-                                <div class="donate-form__option"><input type="radio" name="donate">Monthly
-                                <input type="radio" name="donate" checked>Once</div>
+                                <div class="donate-form__amount"><input  id="input-amount" type="number" max="9999" placeholder="Another amount" value="100" required></div>
+                                <div class="donate-form__option">
+                                    <div class="donate-form__radio">
+                                        <input type="radio" id="monthly-radio" name="donate">
+                                        <label for="monthly-radio">Monthly</label>
+                                    </div>
+                                    <div class="donate-form__radio">
+                                        <input type="radio"id="once-radio" name="donate" checked>
+                                        <label for="once-radio">Once</label>
+                                    </div>
+                                </div>
                                 <input type="submit" value="Feed a friend now" class="donate__button button">
                             </form>
                             

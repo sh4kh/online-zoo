@@ -157,6 +157,47 @@
         background-image: url("../../img/background_panda_tablet.jpg");
     }
 
+
+    .pick-and-feed {
+
+        padding: 30px 0 46px 0;
+
+        &__tagline {
+            font-size: 24px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .donate {
+        padding: 36px 27px 25px 27px;
+
+        &__subtitle {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &__panda {
+            margin-bottom: 41px;
+        }
+
+        &__amount {
+            margin-bottom: 0;
+        };
+    }
+
+    .panda {
+        width: 100%;
+    }
+
     .footer {
         padding-bottom: 10px;
         &__container {
@@ -205,3 +246,103 @@
         }
     }
 }
+
+@media (max-width: 634px) {
+    .panda {
+        width: 80%;
+
+        &__count {
+            padding-top: 15%;
+        }
+
+        &__multiply {
+            margin-right: 5%;
+            padding-top: 30%;
+        }
+    }
+    .progress {
+        width: 100%;
+
+        &__bar {
+            &::after {
+                width: 90%;
+                left: 6%;
+            }
+        }
+    }
+} 
+
+@media (max-width: 486px) {
+    .progress {
+        width: 100%;
+
+        &__bar {
+            &::after {
+                width: 88%;
+                left: 6%;
+            }
+        }
+    }
+} 
+
+@media (max-width: 450px) {
+
+    .pick-and-feed {
+        padding: 30px 0 20px 0;
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .donate {
+        padding: 20px 0 20px 0;
+
+        &__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 140%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .panda {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0;
+
+        &__number {
+            font-size: 40px;
+            margin-bottom: 6px;
+        }
+
+        &__label {
+            font-size: 10px;
+            line-height: 140%;
+        }
+
+        &__multiply {
+            padding-top: 20%;
+        }
+        &__image {
+            width: 160px;
+            height: 141px;
+        }
+    }
+    .progress {
+        width: 100%;
+
+        &__bar {
+            &::after {
+                width: 84%;
+                left: 10%;
+            }
+        }
+    }
+} 
+

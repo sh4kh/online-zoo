@@ -275,10 +275,10 @@ body {
     }
 
     &__button {
-        margin-bottom: 30px;
     }
 
     &__footer-text {
+        text-align: center;
     }
 }
 .panda {
@@ -387,6 +387,9 @@ body {
 }
 
 .donate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__amount {
         width: 268px;;
@@ -395,14 +398,60 @@ body {
         border-radius: 2px;
         padding: 16px 0 16px 9px;
         margin-bottom: 25px;
+        position: relative;
+
+        &::after {
+            content: url(../../img/dollar_icon.png);
+            position: absolute;
+            right: 10px;
+            top: 32%;
+        }
     }
 
     &__option {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 31px;
 
         & input {
             border: 1px solid #FE9013;
+        }
+    }
+
+    &__radio {
+        & input[type=radio] {
+            display: none;
+        }
+
+        & label {
+            display: inline-block;
+	        cursor: pointer;
+            position: relative;
+            padding-left: 26px;
+        }
+
+        & label::before {
+            content: "";
+	        display: inline-block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 0;
+	        top: 2px;
+            border-radius: 50%;
+            border: 1px solid #FE9013;
+        }
+
+        /* Checked */
+        & input[type=radio]:checked + label:before {
+	        background: #4B9200;
+            border: 1px solid #4B9200;
+        }
+ 
+        /* Hover */
+        & label:hover:before {
+	        filter: brightness(120%);
         }
     }
 }

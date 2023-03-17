@@ -65,6 +65,22 @@
 }
 
 
+@media (max-width: 850px) {
+    .progress {
+
+
+        width: 610px;
+
+        &__item:nth-child(-n+3) {
+            display: none;
+        }
+
+        &__bar::after {
+            width: 93%;
+        }
+    }
+}
+
 
 @media (max-width: 740px) {
     .header {
