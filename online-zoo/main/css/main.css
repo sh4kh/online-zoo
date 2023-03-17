@@ -228,7 +228,7 @@ body._active {
 }
 
 .main-block {
-  background-image: url("/img/background_panda.jpg");
+  background-image: url("../../img/background_panda.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -949,7 +949,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-right: 48px;
   }
   .main-block {
-    background-image: url("/img/background_panda_small.png");
+    background-image: url("../../img/background_panda_small.png");
   }
   .main-block__content {
     padding-top: 42px;
@@ -1223,7 +1223,7 @@ input[type=range]::-webkit-slider-thumb {
     z-index: 30;
   }
   .main-block {
-    background-image: url("/img/background_panda_tablet.jpg");
+    background-image: url("../../img/background_panda_tablet.jpg");
   }
   .main-block__content {
     padding-top: 117px;
@@ -1458,7 +1458,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 @media (max-width: 350px) {
   .main-block {
-    background-image: url("/img/background_panda_mobile.jpg");
+    background-image: url("../../img/background_panda_mobile.jpg");
     background-position: top 60px right 0;
   }
   .main-block__content {

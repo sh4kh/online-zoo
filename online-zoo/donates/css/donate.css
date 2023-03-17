@@ -382,13 +382,13 @@ body._active {
   margin-bottom: 8px;
 }
 .progress__dot-container:hover {
-  background: url(/img/roller_icon.svg) no-repeat center;
+  background: url(../../img/roller_icon.svg) no-repeat center;
 }
 .progress__dot-container:hover + .progress__sub-item {
   color: #FE9013;
 }
 .progress__dot-active {
-  background: url(/img/roller_icon.svg) no-repeat center;
+  background: url(../../img/roller_icon.svg) no-repeat center;
 }
 .progress__dot {
   width: 10px;
@@ -570,7 +570,7 @@ body._active {
     max-width: 970px;
   }
   .page__background {
-    background-image: url("/img/background_panda_small.png");
+    background-image: url("../../img/background_panda_small.png");
   }
   .pick-and-feed {
     padding: 40px 0 30px 0;
@@ -731,7 +731,7 @@ body._active {
     z-index: 30;
   }
   .page__background {
-    background-image: url("/img/background_panda_tablet.jpg");
+    background-image: url("../../img/background_panda_tablet.jpg");
   }
   .footer {
     padding-bottom: 10px;
@@ -777,7 +777,7 @@ body._active {
 }
 @media (max-width: 350px) {
   .page__background {
-    background-image: url("/img/background_panda_mobile.jpg");
+    background-image: url("../../img/background_panda_mobile.jpg");
   }
   .footer {
     padding: 20px 0 20px 0;

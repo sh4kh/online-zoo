@@ -28,7 +28,6 @@ let bar = document.getElementById('donate-bar');
 let inputAmount = document.getElementById('input-amount');
 let selectedItem = document.querySelector('.progress__dot-active');
 
-console.log(selectedItem);
 
 bar.onclick = function(event) {
 
@@ -48,4 +47,23 @@ function highlight(elem) {
     }
     selectedItem = elem;
     selectedItem.classList.add('progress__dot-active');
+}
+
+let amountElems = Array.from(document.querySelectorAll('.progress__dot-container'));
+let amountsArray = amountElems.map( (item) => item.dataset.amount);
+console.log(amountsArray);
+
+
+inputAmount.oninput = function() {
+    
+    let value = this.value;
+    let index;
+    if (selectedItem) {
+        selectedItem.classList.remove('progress__dot-active');
+    }
+    if (amountsArray.includes(value)) {
+        index = amountsArray.indexOf(value);
+        amountElems[index].classList.add('progress__dot-active');
+        selectedItem = amountElems[index];
+    }
 }
