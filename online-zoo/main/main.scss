@@ -736,10 +736,11 @@ body {
 
     &__modal {
         position: fixed;
-        left: 35%;
+        left: 50%;
         max-width: 270px;
-        top: 30%;
+        top: 50%;
         z-index: 100;
+        transform: translate(-50%, -50%);
 
         .comment {
             position: relative;
