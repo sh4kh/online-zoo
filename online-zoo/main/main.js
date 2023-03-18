@@ -63,7 +63,7 @@ let sliderWidth = sliderWrap.offsetWidth;
 
 window.onresize = function() {
     console.log('resized');
-
+    
     sliderWidth = sliderWrap.offsetWidth;
 
     if (document.documentElement.clientWidth < 1176) {
@@ -202,6 +202,52 @@ function randomInteger(min, max) {
   }
 
 
+
+
+function makeModalTestimonials() {
+    let isTestimonialsAdaptive = document.documentElement.clientWidth < 964;
+    let row = document.getElementById('testimonials-row');
+
+    if (isTestimonialsAdaptive) {
+        row.addEventListener('click', showModalTestimonials);
+        document.addEventListener('click', closeModalTestimonials)        
+    }
+}
+
+function showModalTestimonials(event) {
+    
+    let testimonial = event.target.closest('.testimonials__column');
+
+    if (!testimonial) return;
+
+    let background = document.querySelector('.background_dark');
+    let modalWindow = testimonial.cloneNode(true);
+    let wrapper = document.querySelector('.wrapper');
+    modalWindow.classList.add('testimonials__modal');
+    modalWindow.classList.remove('testimonials__column');
+    wrapper.append(modalWindow);
+    background.style.display = 'block';
+
+    let closeIcon = document.createElement('div');
+    closeIcon.classList.add('testimonials__close-icon');
+    closeIcon.textContent = 'x';
+    modalWindow.append(closeIcon);
+    closeIcon.onclick = closeModalTestimonials;
+    event.stopPropagation();    
+}
+
+function closeModalTestimonials(event) {
+    
+    let modalWindow = document.querySelector('.testimonials__modal');
+    let background = document.querySelector('.background_dark');
+    if (modalWindow && (!modalWindow.contains(event.target) || event.target === this)) {
+        modalWindow.remove();
+        background.style.display = 'none';
+    }
+    
+}
+
+makeModalTestimonials();
 
 
 

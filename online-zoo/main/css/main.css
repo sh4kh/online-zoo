@@ -111,7 +111,7 @@ body._active {
 .background_dark {
   display: none;
   width: 100%;
-  height: 4000px;
+  height: 10000px;
   background-color: rgba(0, 0, 0, 0.9);
   position: absolute;
   z-index: 20;
@@ -674,6 +674,23 @@ body._active {
   position: absolute;
   right: 0;
   bottom: -100px;
+}
+.testimonials__modal {
+  position: fixed;
+  left: 35%;
+  max-width: 270px;
+  top: 30%;
+  z-index: 100;
+}
+.testimonials__modal .comment {
+  position: relative;
+}
+.testimonials__close-icon {
+  font-size: 20px;
+  position: absolute;
+  color: #000000;
+  right: 15px;
+  top: 10px;
 }
 
 .comment {
