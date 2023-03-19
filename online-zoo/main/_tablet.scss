@@ -1,53 +1,55 @@
 @media (max-width: 640px) {
 
-    body._active {
+    body._dark {
 
         .background_dark {
             display: block;
         }
+    }
 
-        .header {
+    header._active {
 
-            .logo {
-                &__image_header {
-                    display: none;
-                }
-                &__image_orange {
-                    display: block;
-                }
+        .logo {
+            &__image_header {
+                display: none;
             }
-
+            &__image_orange {
+                display: block;
+            }
+        }
+        .header {
             &__title {
                 color: #FE9013;
             }
-
+    
             &__logo {
                 border: 1px solid #FE9013;
             }
             &__menu {
                 right: 0;
             }
+        }
+        
 
-            .burger {
-                &::before, &::after {
-                    background-color: #333B41;
-                    width: 80%;
-                }
-    
-                &::before {
-                    top: 50%;
-                    transform: rotate(-45deg) translate(5%, -50%);
-                    
-                }
-    
-                &::after {
-                    bottom: 50%;
-                    transform: rotate(45deg) translate(5%, 50%);
-                }
-    
-                span {
-                    display: none;
-                }
+        .burger {
+            &::before, &::after {
+                background-color: #333B41;
+                width: 80%;
+            }
+
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(5%, -50%);
+                
+            }
+
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(5%, 50%);
+            }
+
+            span {
+                display: none;
             }
         }
     }

@@ -104,7 +104,7 @@ body {
   line-height: 140%;
   background-color: #FFFFFF;
 }
-body._active {
+body._dark {
   overflow: hidden;
 }
 
@@ -415,9 +415,10 @@ body._active {
 .pet__image_popup {
   position: absolute;
   bottom: 0;
-  left: 30%;
+  left: 50%;
   z-index: 3;
   transition: all 0.8s ease;
+  transform: translate(-50%, 50%);
 }
 .pet__image_bg {
   height: 100%;
@@ -434,8 +435,9 @@ body._active {
   transition: opacity 0.7s ease;
 }
 .pet__image:hover .pet__image_popup {
-  transform: translateY(-110px);
   opacity: 1;
+  left: 50%;
+  bottom: 50%;
 }
 .pet__footer {
   display: flex;
@@ -467,6 +469,7 @@ body._active {
   flex-direction: column;
   padding: 8px 12px 15px 10px;
   opacity: 0;
+  min-width: 150px;
 }
 .pet-popup__button {
   padding: 4px 17px;
@@ -1125,37 +1128,37 @@ input[type=range]::-webkit-slider-thumb {
   }
 }
 @media (max-width: 640px) {
-  body._active .background_dark {
+  body._dark .background_dark {
     display: block;
   }
-  body._active .header .logo__image_header {
+  header._active .logo__image_header {
     display: none;
   }
-  body._active .header .logo__image_orange {
+  header._active .logo__image_orange {
     display: block;
   }
-  body._active .header__title {
+  header._active .header__title {
     color: #FE9013;
   }
-  body._active .header__logo {
+  header._active .header__logo {
     border: 1px solid #FE9013;
   }
-  body._active .header__menu {
+  header._active .header__menu {
     right: 0;
   }
-  body._active .header .burger::before, body._active .header .burger::after {
+  header._active .burger::before, header._active .burger::after {
     background-color: #333B41;
     width: 80%;
   }
-  body._active .header .burger::before {
+  header._active .burger::before {
     top: 50%;
     transform: rotate(-45deg) translate(5%, -50%);
   }
-  body._active .header .burger::after {
+  header._active .burger::after {
     bottom: 50%;
     transform: rotate(45deg) translate(5%, 50%);
   }
-  body._active .header .burger span {
+  header._active .burger span {
     display: none;
   }
   .header__menu {

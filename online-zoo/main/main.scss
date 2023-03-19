@@ -12,7 +12,7 @@ body {
     line-height: 140%;
     background-color: #FFFFFF;
 
-    &._active {
+    &._dark {
         overflow: hidden;
     }
 }
@@ -408,10 +408,10 @@ body {
         &_popup {
             position: absolute;
             bottom: 0;
-            left: 30%;
+            left: 50%;
             z-index: 3;
             transition: all 0.8s ease;
-            
+            transform: translate(-50%, 50%);
         }
         &_bg {
             height: 100%;
@@ -430,13 +430,9 @@ body {
         }
 
         &:hover &_popup {
-            transform: translateY(-110px);
             opacity: 1;
-            
-            
-            
-            
-           
+            left: 50%;
+            bottom: 50%;
         }
     }
     &__footer {
@@ -477,6 +473,7 @@ body {
     flex-direction: column;
     padding: 8px 12px 15px 10px;
     opacity: 0;
+    min-width: 150px;
     &__button {
         padding: 4px 17px;
         display: flex;

@@ -1,7 +1,6 @@
 "use strict"
 
 //Burger JS
-
 function burgetInit() {
     const burger = document.getElementById('burger');
     burger.addEventListener('click', showBurger);
@@ -11,13 +10,24 @@ function burgetInit() {
 burgetInit();
     
 function showBurger(event) {
-    document.body.classList.toggle('_active');
+    let modalTestimonialIsActive = document.querySelector('.testimonials__modal');
+    
+    if (!modalTestimonialIsActive) {
+        document.body.classList.toggle('_dark');
+    } 
+    header.classList.toggle('_active');
 }
 
 function closeActiveMenu(event) {
-    let burger_is_active = document.body.classList.contains('_active');
+    let modalTestimonialIsActive = document.querySelector('.testimonials__modal');
+    let burger_is_active = header.classList.contains('_active');
+    
+    
     if (!header.contains(event.target) && burger_is_active) {
-        document.body.classList.remove('_active');
+        if (!modalTestimonialIsActive) {
+            document.body.classList.remove('_dark');
+        } 
+        header.classList.remove('_active');
     }
 }
 
@@ -226,7 +236,7 @@ function showModalTestimonials(event) {
     modalWindow.classList.add('testimonials__modal');
     modalWindow.classList.remove('testimonials__column');
     wrapper.append(modalWindow);
-    background.style.display = 'block';
+    document.body.classList.add('_dark');
 
     let closeIcon = document.createElement('div');
     closeIcon.classList.add('testimonials__close-icon');
@@ -239,10 +249,11 @@ function showModalTestimonials(event) {
 function closeModalTestimonials(event) {
     
     let modalWindow = document.querySelector('.testimonials__modal');
-    let background = document.querySelector('.background_dark');
     if (modalWindow && (!modalWindow.contains(event.target) || event.target === this)) {
         modalWindow.remove();
-        background.style.display = 'none';
+        if (!header.classList.contains('_active')) {
+            document.body.classList.remove('_dark');
+        }
     }
     
 }
